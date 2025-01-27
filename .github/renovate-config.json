@@ -1,0 +1,65 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dependencyDashboard": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "docker/buildx",
+      "fileMatch": [
+        "^.*\\.sh$"
+      ],
+      "matchStrings": [
+        "BUILDX_VERSION=\"(?<currentValue>[^\"]+)\""
+      ]
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "bcicen/ctop",
+      "fileMatch": [
+        "^.*\\.sh$"
+      ],
+      "matchStrings": [
+        "CTOP_VERSION=\"(?<currentValue>[^\"]+)\""
+      ]
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-releases",
+      "depNameTemplate": "docker/compose",
+      "fileMatch": [
+        "^.*\\.sh$"
+      ],
+      "matchStrings": [
+        "COMPOSE_VERSION=\"(?<currentValue>[^\"]+)\""
+      ]
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "moby/moby",
+      "fileMatch": [
+        "^.*\\.sh$"
+      ],
+      "matchStrings": [
+        "MOBY_VERSION=\"(?<currentValue>[^\"]+)\""
+      ]
+    },
+    {
+      "customType": "regex",
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "docker/cli",
+      "fileMatch": [
+        "^.*\\.sh$"
+      ],
+      "matchStrings": [
+        "CLI_VERSION=\"(?<currentValue>[^\"]+)\""
+      ]
+    }
+  ],
+  "onboarding": false,
+  "repositories": [
+    "suneetk92/docker-coreelec"
+  ]
+}
