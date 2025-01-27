@@ -4,34 +4,44 @@
   "authorization-plugins": [],
   "bip": "",
   "bridge": "",
+  "builder": {
+    "gc": {
+      "enabled": true,
+      "defaultKeepStorage": "10GB",
+      "policy": [
+        { "keepStorage": "10GB", "filter": ["unused-for=2200h"] },
+        { "keepStorage": "50GB", "filter": ["unused-for=3300h"] },
+        { "keepStorage": "100GB", "all": true }
+      ]
+    }
+  },
   "cgroup-parent": "",
-  "cluster-advertise": "",
-  "cluster-store": "",
-  "cluster-store-opts": {},
   "containerd": "",
   "containerd-namespace": "docker",
+  "containerd-plugins-namespace": "docker-plugins",
   "data-root": "/storage/.docker/data-root",
   "debug": false,
   "default-address-pools": [
     {
-      "base": "172.80.0.0/16",
+      "base": "172.30.0.0/16",
       "size": 24
     },
     {
-      "base": "172.90.0.0/16",
+      "base": "172.31.0.0/16",
       "size": 24
     }
   ],
   "default-cgroupns-mode": "private",
   "default-gateway": "",
   "default-gateway-v6": "",
+  "default-network-opts": {},
   "default-runtime": "runc",
   "default-shm-size": "64M",
   "default-ulimits": {
     "nofile": {
-      "Hard": 1048576,
+      "Hard": 64000,
       "Name": "nofile",
-      "Soft": 1048576
+      "Soft": 64000
     }
   },
   "dns": [],
@@ -44,7 +54,9 @@
   "fixed-cidr": "",
   "fixed-cidr-v6": "",
   "group": "root",
+  "host-gateway-ip": "",
   "hosts": ["unix:///var/run/docker.sock"],
+  "proxies": {},
   "icc": true,
   "init": true,
   "init-path": "/storage/.docker/bin/docker-init",
@@ -58,22 +70,26 @@
   "labels": [],
   "live-restore": true,
   "log-driver": "journald",
+  "log-format": "text",
   "log-level": "",
+  "log-opts": {},
   "max-concurrent-downloads": 3,
   "max-concurrent-uploads": 5,
   "max-download-attempts": 5,
   "mtu": 0,
   "no-new-privileges": false,
-  "oom-score-adjust": -500,
+  "node-generic-resources": [],
   "pidfile": "",
   "raw-logs": false,
   "registry-mirrors": [],
+  "runtimes": {},
   "seccomp-profile": "",
   "selinux-enabled": false,
   "shutdown-timeout": 15,
   "storage-driver": "overlay2",
-  "storage-opts": ["overlay2.override_kernel_check=1"],
+  "storage-opts": [],
   "swarm-default-advertise-addr": "",
+  "tls": false,
   "userland-proxy": false,
   "userland-proxy-path": "/storage/.docker/bin",
   "userns-remap": ""
