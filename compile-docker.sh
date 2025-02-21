@@ -5,11 +5,11 @@ normal=$(tput sgr0)
 
 echo "Docker compiler (client and server) for CoreELEC systems"
 
-BUILDX_VERSION="0.20.1"
+BUILDX_VERSION="0.21.1"
 CTOP_VERSION="0.7.7"
-COMPOSE_VERSION="2.32.4"
+COMPOSE_VERSION="2.33.1"
 MOBY_VERSION="28.0.0"
-CLI_VERSION="27.5.1"
+CLI_VERSION="28.0.0"
 
 # Prefix definitions
 BUILDX_PREFIX="buildx-v${BUILDX_VERSION}."
