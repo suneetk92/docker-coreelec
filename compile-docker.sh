@@ -8,7 +8,7 @@ echo "Docker compiler (client and server) for CoreELEC systems"
 BUILDX_VERSION="0.22.0"
 CTOP_VERSION="0.7.7"
 COMPOSE_VERSION="2.35.0"
-MOBY_VERSION="28.0.4"
+MOBY_VERSION="28.1.1"
 CLI_VERSION="28.0.4"
 
 # Prefix definitions
