@@ -5,7 +5,7 @@ normal=$(tput sgr0)
 
 echo "Docker compiler (client and server) for CoreELEC systems"
 
-BUILDX_VERSION="0.22.0"
+BUILDX_VERSION="0.23.0"
 CTOP_VERSION="0.7.7"
 COMPOSE_VERSION="2.35.1"
 MOBY_VERSION="28.0.4"
