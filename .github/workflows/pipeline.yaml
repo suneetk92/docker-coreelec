@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Download build artifacts
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: docker-tarballs
           path: artifacts/
