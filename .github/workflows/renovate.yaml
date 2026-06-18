@@ -10,7 +10,7 @@ jobs:
     if: github.event_name == 'schedule'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: Renovate Bot GitHub Action
         uses: renovatebot/github-action@v43.0.11
